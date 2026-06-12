@@ -118,6 +118,41 @@
   .cap .lnk svg{width:12px;height:12px}
 
   @media (prefers-reduced-motion:reduce){.cta,.cta:hover,.col:hover img{transform:none}.badge path{stroke-dashoffset:0;animation:none}.point svg{animation:none}}
+
+  /* ============================================================
+     Responsive — tablet & desktop. Everything below only applies
+     at >=600px, so the mobile layout above is left untouched.
+     ============================================================ */
+  @media (min-width:600px){
+    .page{max-width:none;border-left:none;border-right:none;
+      background:radial-gradient(58% 54% at 50% -8%, rgba(230,126,34,.20), transparent 60%),
+        linear-gradient(180deg,var(--navy-top) 0%, var(--navy) 30%)}
+    .wrap{max-width:560px;width:100%;margin-inline:auto;padding:48px 30px}
+    h1{font-size:clamp(30px,5vw,40px)}
+    .legal{max-width:560px;margin-inline:auto;width:100%}
+  }
+
+  @media (min-width:900px){
+    .wrap{max-width:1060px;display:grid;grid-template-columns:1.05fr .95fr;
+      align-items:center;column-gap:72px;row-gap:0;padding:64px 56px}
+    .hero{text-align:left}
+    .eyebrow{justify-content:flex-start}
+    .eyebrow::after{display:none}
+    h1{font-size:clamp(38px,3.6vw,52px);margin-bottom:20px}
+    .kicker{text-align:left;margin:0;max-width:34ch}
+    .subtitle{text-align:left;font-size:18px}
+    .proof{text-align:left;margin:11px 0 0;max-width:40ch}
+    /* the signup column becomes a card to anchor the right side */
+    .signup{background:rgba(255,255,255,.045);border:1px solid var(--line-strong);
+      border-radius:20px;padding:32px 28px;
+      box-shadow:0 34px 70px -30px rgba(0,0,0,.75)}
+    .legal{max-width:1060px}
+  }
+
+  @media (min-width:1280px){
+    .wrap{column-gap:104px;padding:72px 64px}
+  }
+
 </style>
 </head>
 <body>
@@ -134,7 +169,7 @@
         <p class="proof">Die Checklisten, auf die führende <b>Customer&#8209;Success&#8209;Teams</b> nicht verzichten können. <b>Hol sie dir.</b></p>
       </div>
 
-      <div>
+      <div class="signup">
         <div class="point">
           <span>Trag deine Kontaktdaten ein</span>
           <svg viewBox="0 0 24 24" fill="none"><path d="M7 9 L12 14 L17 9 M7 14 L12 19 L17 14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>

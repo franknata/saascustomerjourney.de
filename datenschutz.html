@@ -55,6 +55,25 @@
     overflow-wrap:anywhere;line-height:1.7;margin-top:14px}
   .legal a{color:var(--muted);text-decoration:none}.legal a:hover{color:var(--orange)}
   .legal .sep{opacity:.4;margin:0 7px}
+
+  /* ============================================================
+     Responsive — tablet & desktop (>=600px only). Mobile untouched.
+     ============================================================ */
+  @media (min-width:600px){
+    .page{max-width:none;border-left:none;border-right:none;
+      background:radial-gradient(56% 46% at 50% -6%, rgba(230,126,34,.16), transparent 60%),
+        linear-gradient(180deg,var(--navy-top) 0%, var(--navy) 26%)}
+    .wrap{max-width:720px;width:100%;margin-inline:auto;padding:48px 32px 16px}
+    h1{font-size:36px}
+    .legal{max-width:720px;margin-inline:auto;width:100%}
+  }
+  @media (min-width:900px){
+    .wrap{padding:64px 40px 20px}
+    h1{font-size:40px;margin-bottom:30px}
+    .block{margin-bottom:26px}
+    .block p,.block li{font-size:15.5px}
+  }
+
 </style>
 </head>
 <body>
@@ -99,8 +118,7 @@
 
       <div class="block">
         <h2>E&#8209;Mail&#8209;Versand</h2>
-        <p>Für den Versand nutze ich einen E&#8209;Mail&#8209;Dienstleister <span class="ph">[noch festzulegen]</span>, der die Daten in meinem Auftrag verarbeitet.</p>
-        <p class="hint"><b>Noch zu ergänzen:</b> den gewählten Anbieter eintragen (z. B. MailerLite, ConvertKit, Beehiiv oder Brevo).</p>
+        <p>Für den Versand nutze ich den E&#8209;Mail&#8209;Dienstleister <span class="name">Sender</span> (sender.net), der die Daten in meinem Auftrag verarbeitet.</p>
       </div>
 
       <div class="block">
